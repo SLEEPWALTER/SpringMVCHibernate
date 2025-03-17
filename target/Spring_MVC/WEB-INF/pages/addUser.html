@@ -2,20 +2,33 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Add User</title>
 </head>
 <body>
-<form th:method="post" th:action="@{/updateUser}" th:object="${user}">
-    <input type="hidden" th:field="*{id}"/>
+<h1>Add User</h1>
+
+<form th:method="post" th:action="@{/saveUser}" th:object="${user}">
+    <!-- Поле для имени -->
     <label for="name">Enter name: </label>
     <input type="text" th:field="*{name}" id="name"/>
+    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" style="color: red;"></span>
     <br/>
+
+    <!-- Поле для фамилии -->
     <label for="surname">Enter surname: </label>
-    <input type="text" th:field="*{sureName}" id="surname"/>
+    <input type="text" th:field="*{surname}" id="surname"/>
+    <span th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}" style="color: red;"></span>
     <br/>
+
+    <!-- Поле для возраста -->
+    <label for="age">Enter age: </label>
+    <input type="number" th:field="*{age}" id="age"/>
+    <span th:if="${#fields.hasErrors('age')}" th:errors="*{age}" style="color: red;"></span>
+    <br/>
+
     <input type="submit" value="OK"/>
 </form>
+
+<a th:href="@{/users}">Back to Users List</a>
 </body>
 </html>
-
-

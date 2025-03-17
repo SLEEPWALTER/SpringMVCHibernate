@@ -7,13 +7,9 @@ import web.model.User;
 import java.util.List;
 
 public interface UserDao {
-    public List<User> getAllUsers();
-
-    public User getUserById(int id);
-
-    public void save(User user);
-
-    public void update(User user);
-
-    public void delete(int id);
+    List<User> getAllUsers();
+    User getUserById(int id);
+    void save(User user);
+    void update(User user);
+    void delete(int id);
 }
