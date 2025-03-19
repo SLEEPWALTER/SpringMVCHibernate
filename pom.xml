@@ -74,17 +74,16 @@
         </dependency>
 
         <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.glassfish</groupId>
             <artifactId>javax.el</artifactId>
             <version>3.0.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.glassfish.main.common/glassfish-api -->
-        <dependency>
-            <groupId>org.glassfish.main.common</groupId>
-            <artifactId>glassfish-api</artifactId>
-            <version>8.0.0-JDK17-M6</version>
-        </dependency>
-
 
         <dependency>
             <groupId>org.thymeleaf</groupId>
